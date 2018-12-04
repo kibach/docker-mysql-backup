@@ -22,7 +22,7 @@ Copy the [configuration](etc/default/docker-mysql-backup) to `/etc/default/`:
 
 You'll find [the detailed information on the Docker MySQL-Backup tool in the original binfalse's blog article.](https://binfalse.de/2017/02/06/docker-mysql-backup/)
 
-This version of the tool relies on MYSQL_USER and MYSQL_PASSWORD environment variables instead of MYSQL_ROOT_PASSWORD, which is useful when MYSQL_RANDOM_ROOT_PASSWORD=1 is used.
+This version of the tool relies on `MYSQL_USER` and `MYSQL_PASSWORD` environment variables instead of `MYSQL_ROOT_PASSWORD`, which is useful when `MYSQL_RANDOM_ROOT_PASSWORD=1` is used.
 
 ## Licence
 
