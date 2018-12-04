@@ -8,7 +8,7 @@ A tool to automatically dump running [MySQL](https://www.mysql.com/) and [MariaD
 
 Clone the [Docker MySQL-Backup repository:](https://github.com/binfalse/docker-mysql-backup)
 
-    git clone https://github.com/binfalse/docker-mysql-backup.git
+    git clone https://github.com/kibach/docker-mysql-backup.git
 
 Copy the [backup script](etc/cron.daily/docker-mysql-backup) to the `cron.daily` (most likely `/etc/cron.daily/`) directory on your system:
 
@@ -18,18 +18,11 @@ Copy the [configuration](etc/default/docker-mysql-backup) to `/etc/default/`:
 
     cp docker-mysql-backup/etc/default/docker-mysql-backup /etc/default/docker-mysql-backup
 
-### Install from my Apt repository
-
-If you're running a Debian-based system you may want to [use my apt-repository to install the Docker MySQL-Backup tool.](https://binfalse.de/software/apt-repo/) In that case you just need to run
-
-    aptitude install bf-docker-mysql-backup
-
-Afterwards, look into `/etc/default/docker-mysql-backup` for configuration options. This way, you'll always stay up-to-date with bug fixes and new features :)
-
 ## How does that work?
 
-You'll find [an article with detailed information on the Docker MySQL-Backup tool in my blog.](https://binfalse.de/2017/02/06/docker-mysql-backup/)
-I strongly recommend to read that article before deploying the tool.
+You'll find [the detailed information on the Docker MySQL-Backup tool in the original binfalse's blog article.](https://binfalse.de/2017/02/06/docker-mysql-backup/)
+
+This version of the tool relies on MYSQL_USER and MYSQL_PASSWORD environment variables instead of MYSQL_ROOT_PASSWORD, which is useful when MYSQL_RANDOM_ROOT_PASSWORD=1 is used.
 
 ## Licence
 
